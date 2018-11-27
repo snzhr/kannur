@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kannur Shopping</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="stylesheet" href="prod_details/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+
+     <script src="modernizr.custom.05819.js"></script>
+  </head>
+<body>
+<!--
+	Upper Header Section
+-->
+	<div class="topNav">
+    <div class="container">
+      <div class="aligntop">
+        <div class="pull-left socialNw">
+        </div>
+        <a class="active" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
+        <a href="signup.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign Up </a>
+        <a href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a>
+        <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i> Item(s)</a>
+      </div>
+    </div>
+  </div>
+
+  
+<div id="form" style="width:800px; margin:0 auto;">
+<form action="" method="post"
+    enctype="text/plain">
+
+  <fieldset>
+<legend>Create Account</legend>
+  Your Name<br><input type="text" name="name"> <br>
+  Email<br><input type="text" name="email"><br>
+  Password<br><input type="password" name="pwd" maxlength="8"><br>
+  Re-enter password<br><input type="password" name="pwd" maxlength="8"><br>
+</fieldset>
+<input type ="submit" id="submit" name ="submit_button" value="Create your Kannur account"/>
+</form>
+</div>
+
+<script>
+     function processInput(){
+       var propertyWidth = 300;
+       var propertyHeight = 100;
+       var winLeft = ((screen.width - propertyWidth)/2);
+       var winTop = ((screen.height - propertyHeight)/2);
+       var winOptions = "width=300,height=100";
+       winOptions +=",left="+winLeft;
+       winOptions +=",top="+winTop;
+       window.open("confirm.htm","confirm",winOptions);
+     }
+
+     function createEventListener(){
+       var submitButton = document.getElementById("submit");
+       if(submitButton.addEventListener){
+         submitButton.addEventListener("click", processInput, false);
+       }
+       else if(submitButton.attachEvent){
+         submitButton.attachEvent("onclick", processInput);
+       }
+     }
+
+     if (window.addEventListener){
+       window.addEventListener("load", createEventListener, false);
+     }
+     else if (window.attachEvent){
+       window.attachEvent("onload", createEventListener);
+     }
+</script>
+  </body>
+</html>
